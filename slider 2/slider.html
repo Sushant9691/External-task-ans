@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My HTML Page</title>
+</head>
+<body>
+    <h2>Simple interest calculation</h2>
+    <label>p</label> <input placeholder="ammount" id="text1" ><br><br>
+    <label>r</label> <input placeholder="rate of interest" id="text2"><br><br>
+    <label>t</label> <input placeholder="time in year" id="text3"><br><br>
+    <button onclick="calculateinterest()">calculate</button>
+    <div id="result-div"></div>
+    <p id="result-div">total ammount</p>
+    <p id="result-div">interest</p>
+    <script>
+        function calculateinterest(){
+            let p=document.getElementById('text1').value
+            let r=document.getElementById('text2').value
+            let t=document.getElementById('text3').value
+            let si=p *r * t / 100;
+
+            document.getElementById('result-div').innerHTML = si
+
+
+
+        }
+
+
+    </script>
+</body>
+</html>
